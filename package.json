@@ -1,0 +1,31 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "clase-1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \" este es un test \"",
+    "otro": "echo \" este es otro comando \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidlechuga/NodeJs.git"
+  },
+  "keywords": [
+    "kodemia-nodejs-clase1"
+  ],
+  "author": "davidlechuga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidlechuga/NodeJs/issues"
+  },
+  "homepage": "https://github.com/davidlechuga/NodeJs#readme",
+  "dependencies": {
+    "colors": "^1.3.3",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "standard": "^14.1.0"
+  }
+}
