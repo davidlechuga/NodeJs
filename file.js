@@ -5,3 +5,8 @@ fs.writeFile('message.doc', 'el tiempo apremia XD', (err) => {
   if (err) throw err;
   console.log('The file has been saved!');
 });
+
+  
+
+
+/*  HACER nuestra funcion*/
