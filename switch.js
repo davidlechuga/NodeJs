@@ -3,6 +3,9 @@ const htttp = require ('http');
 
 const server = htttp.createServer((request, response)=>{
     const url = request.url
+    const method = request.method
+    console.log('method: ', method)
+
 
     switch(url) {
         case '/hola':
