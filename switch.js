@@ -16,8 +16,8 @@ const server = htttp.createServer((request, response)=>{
         break
 
         case '/adios':
-            if (method === 'GET')
-                response.write('<h1> ADIOS MUNDO  </h1>')
+            if (method === 'POST')   /*  see in postpan de request */
+                response.write('<h1> ADIOS MUNDO  POST </h1>')
                 response.write('<div> <img src = "http://az778189.vo.msecnd.net/media/fotos/g/8d21d5094c7e3df4d7a4b04a6f727859.jpg"  style=" height: 100px; width: 150px;"></img> </div>')
         break
 
