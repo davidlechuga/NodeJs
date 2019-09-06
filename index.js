@@ -1,5 +1,25 @@
 const express = require('express');
 const app = express ();
+const app1 = express();
+
+app.get('/hola', (request, response) =>{
+    console.log('HOLA')
+    response.json({
+    username: 'david lechuga'
+                  })
+                                       })
+
+app.post('/adios', (request, response) =>{
+    console.log('ADIOS')
+    response.json({
+    username: 'david lechuga'
+                  })
+                                         })
+
+
+app.listen(4000, () => {
+    console.log('listening')
+                       })
 
 
   
@@ -29,15 +49,4 @@ const app = express ();
 
 */                       
 
-app.get('/hola', (request, response) =>{
-    console.log('HOLA')
-    response.json({
-        username: 'david lechuga'
-                  })
-    response.end()
-                                      })
-
-app.listen(4000, () => {
-    console.log('listening')
-                       })
 
