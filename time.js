@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 var requestTime = function (req, res, next) {
-  req.requestTime = Date(Date.now());
+  req.requestTime = Date(Date.now());  /*    JS methods  */
   next();
                                             };
 app.use(requestTime);
