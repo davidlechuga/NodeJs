@@ -8,6 +8,7 @@ var holaget = function (req, res, next) {
                                         });
   next();
                                          };
+app.use(holaget);                                        
 
 var holapost = function (req, res, next) {
   console.log('hola post');
@@ -16,6 +17,7 @@ var holapost = function (req, res, next) {
                                         });
   next();
                                          };  
+app.use(holapost);
 
 var holadelete = function (req, res, next) {
   console.log('hola delete');
@@ -24,8 +26,7 @@ var holadelete = function (req, res, next) {
                                         });
   next();
                                           };
+app.use(holadelete);                                          
 
-app.use(holaget);
-app.use(holapost);
-app.use(holadelete);
+
 app.listen(3000);
