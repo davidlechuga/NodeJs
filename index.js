@@ -1,54 +1,63 @@
-const express = require ('express');
+const express = require('express');
 const app = express();
-/*
-app.use(express.json())
+app.use(express.json()); //aqui estoy llamando la funcion expŕess.json()
 
-const Arrkoders = [{
-    name: 'Carlos',
-    age: '25',
-    generation: 4
-                },
-                {
-    name: 'DAVID',
-    age: '24',
-    generation: 4
-                },  
-                ]
+const koders = [{
+	name: 'Carlos',
+	age: 25,
+	generation: 4
+},{
+	name: 'Rurick',
+	age: 25,
+	generation: 4
+},{
+	name: 'Mike',
+	age: 25,
+	generation: 5
+}];
 
-app.get('/Koders', (req, res) => {
-    res.json ({
-        message: 'todos los koders GET',
-        data: {
-            koders: Arrkoders
-                                }
-                                })
-                                })
+app.get('/koders',(resquest, response)=>{
+	response.json({
+		message: 'Todos los Koders',
+		data: {
+			koders: koders
+		}
+	})
+});
 
-app.post('/Koders', (req, res) => {
-        
+app.post('/koders',(request, response)=>{
+	const newKoder = request.body
+	koders.push(newKoder)
+	response.json({
+		message: 'New Koder added',
+		data: {
+			koders: koders
+		}	
+	})
+});
 
-   
+app.delete('/koders/:index',(request,response)=>{
+	const {index} = request.params
+	console.log('index: ', index)
+	koders.splice(index,1)
+	response.json({
+		message: `Koder in ${index} position, deleted`,
+		data: {
+			koders
+		}
+	})
+});
 
-                                  }) 
-    
-    
-app.get ('/', (req, res) => {
-    res.send([{
-        alumno: 'david'
-    }])
-})
+app.patch('/koders/:index', (request, response)=>{
+	const {index} = request.params
+	console.log('index:', index)
+	const {koder} = request
+	koders[index - 1] = {
+		...koders[index - 1],//spread o rest operator
+		...body
+	}
+});
 
-
-app.get ('/json', (req, res) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ a: 1 }));
-})
-
-*/
-
-
-
-
-app.listen(5000, () => {
-    console.log('listening')
-})
+app.listen(5000,()=>{
+	console.log('Koders API Listening')
+});
