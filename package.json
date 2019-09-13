@@ -4,9 +4,7 @@
   "description": "clase-1",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \" este es un test \"",
-    "otro": "echo \" este es otro comando \""
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +22,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "colors": "^1.3.3",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "moment": "^2.24.0",
     "mongoose": "^5.7.0"
