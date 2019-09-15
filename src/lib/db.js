@@ -7,10 +7,12 @@ const {
     DB_NAME
 } = process.env
 
-const uri = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`
+const uri = `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}?retry=true&w=majority`
 
-
-module.exports = () => mongoose.connect(uri,  {
+module.exports = () => mongoose.connect(
+    uri,
+  {
     useNewUrlParser:true,
-    useNewUrlParser: true
-})
+    useUnifiedTopology: true
+  }
+)

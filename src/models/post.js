@@ -1,7 +1,6 @@
 const mongoose = require ('mongoose');
 const postSchema = new mongoose.Schema ({
 
-
     title: {
         type:String,
         minlength: 5,
@@ -29,6 +28,7 @@ const postSchema = new mongoose.Schema ({
     },
     image: {
         type: String,
+        default: '',
         required:false
     }
 })
