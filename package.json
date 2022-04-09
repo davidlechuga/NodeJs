@@ -23,7 +23,7 @@
   "homepage": "https://github.com/davidlechuga/NodeJs#readme",
   "dependencies": {
     "colors": "^1.3.3",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "standard": "^14.1.0"
